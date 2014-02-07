@@ -1,0 +1,126 @@
+<!--/**---------------------------------------------------------------
+--  Copyright             :  2012-2013
+--  Author                :  JOHN JIANJUN YIN
+--	Email				  :	 john.yin@ebizdesigner.com
+--  Version               :  1.0
+--  Date                  :  05/06/2013
+--  Description           :
+--
+--  Params Description    :
+--	
+--  History               :
+--      <author>   <time>      <version >       <desc>
+--      JOHN      05/06/2013       1.0         build
+--		JOHN	  07/02/2014	   1.1		html5shiv.js
+--											css3-mediaqueries.js
+---------------------------------------------------------------**/-->
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>The Chinese Tea</title>
+	<meta name="description" content="The Chinese Tea">
+	<meta name="author" content="Jonh Yin">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/ct.css?v=1.0">
+	<!--[if lt IE 9]>
+		<script src="./js/html5shiv.js"></script>
+	<![endif]-->
+	<script src="./js/css3-mediaqueries.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<header>
+			<hgroup>
+				<h1 id="logo">Chinese Tea</h1>
+				<h2 id="description">Tea likely originated in Yunnan, China during the Shang Dynasty (1500 BC-1046 BC) as a medicinal drink.</h2>
+			</hgroup>
+			<nav class="clearfix">
+				<ul class="clearfix">
+					<li class="clearfix"><a href="./index.html">Home</a></li>
+					<li class="clearfix"><a href="./about.html">About</a></li>
+				</ul>
+				<a href="#" id="pull">Menu</a>
+				<form id="search">
+					<input placeholder="Enter keyword">
+					<input type="submit" value="search">
+				</form>
+			</nav>			
+			<div style="clear: both"></div> <!-- AVOID PARENT: HEADER COLLAPSING -->
+		</header>
+		<div id="content">
+			<article>
+				<br>
+				<div class="textcontent">
+					<p>The practice of drinking tea has had a long history in China, having originated there. Although tea originated in China, Chinese tea generally represents tea leaves which have been processed using methods inherited from ancient China. According to popular legend, tea was discovered by Chinese Emperor Shennong in 2737 BCE when a leaf from a nearby shrub fell into water the emperor was boiling. Tea is deeply woven into the history and culture of China. The beverage is considered one of the seven necessities of Chinese life, along with firewood, rice, oil, salt, soy sauce and vinegar.</p>
+				</div>
+			</article>
+		</div>
+		<!--
+		<aside>
+			<section><h3>Widget there</h3></section>
+		</aside>
+		-->
+		<div class="thumblist">
+			<div class="thumbitem">
+				<div class="thumbtitle"><a class="thumbtitle" href="#">Green Tea</a></div>
+				<div class="thumbnail">
+					<a href="#">
+						<img class="imgstyle" alt="" src="./images/gtea.jpg" style="opacity: 1;"></img>
+					</a>
+				</div>
+				<div class="textcontent">Green tea is made from the leaves from Camellia sinensis that have undergone minimal oxidation during processing. Green tea originates in China, but it has become associated with many cultures throughout Asia. <br><a class="read-more" href="http://localhost/ct/">Read more</a>
+				</div>
+			</div>
+			<div class="thumbitem">
+				<div class="thumbtitle"><a class="thumbtitle" href="#">Red Tea</a></div>
+				<div class="thumbnail">
+					<a href="#">
+						<img class="imgstyle" alt="" src="./images/rtea.jpg" style="opacity: 1;"></img>
+					</a>
+				</div>
+				<div class="textcontent">Red Tea is an English novel written by Paul Harris Daniel (born 1910). It was published in Madras by Higginbothams in 1969. The 2013 Tamil film Paradesi was based on it. It is based on the experiences of tea plantation workers in the Madras Presidency ...<br><a class="read-more" href="http://localhost/ct/">Read more</a>
+				</div>
+			</div>
+			<div class="thumbitem">
+				<div  class="thumbtitle"><a class="thumbtitle" href="#">Black Tea</a></div>
+				<div class="thumbnail">
+					<a href="#">
+						<img class="imgstyle" alt="" src="./images/btea.jpg" style="opacity: 1;"></img>
+					</a>
+				</div>
+				<div class="textcontent">Black tea, which is referred to in Chinese, Japanese, and Korean as "red tea". The completely oxidized bud leaves of Camellia sinensis from which black tea is made. A marketing name for tisane (infused drink) made from leaves of rooibos... <br><a class="read-more" href="http://localhost/ct/">Read more</a>
+				</div>
+			</div>
+			<br style="clear: both"></br>
+		</div>
+		<footer><p>Copyright 2013 <a href="mailto:john.yin@ebizdesigner.com?Subject=I%20Like%20Chinese%20Tea">John Yin</a></p></footer>
+	</div>
+	<script>
+
+
+	</script>
+</body>
+</html>

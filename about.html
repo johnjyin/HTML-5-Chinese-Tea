@@ -1,0 +1,120 @@
+<!--/**---------------------------------------------------------------
+--  Copyright             :  2012-2013
+--  Author                :  JOHN JIANJUN YIN
+--	Email				  :	 john.yin@ebizdesigner.com
+--  Version               :  1.0
+--  Date                  :  05/06/2013
+--  Description           :
+--
+--  Params Description    :
+--	
+--  History               :
+--      <author>   <time>      <version >       <desc>
+--      JOHN      05/06/2013       1.0         build
+---------------------------------------------------------------**/-->
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>The Chinese Tea</title>
+	<meta name="description" content="The Chinese Tea">
+	<meta name="author" content="Jonh Yin">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/ct.css?v=1.0">
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<header>
+			<hgroup>
+				<h1 id="logo">Chinese Tea</h1>
+				<h2 id="description">Tea likely originated in Yunnan, China during the Shang Dynasty (1500 BC-1046 BC) as a medicinal drink.</h2>
+			</hgroup>
+			<nav class="clearfix">
+				<ul class="clearfix">
+					<li class="clearfix"><a href="./index.html">Home</a></li>
+					<li class="clearfix"><a href="./about.html">About</a></li>
+				</ul>
+				<a href="#" id="pull">Menu</a>
+				<form id="search">
+					<input placeholder="Enter keyword">
+					<input type="submit" value="search">
+				</form>
+			</nav>			
+			<div style="clear: both"></div> <!-- AVOID PARENT: HEADER COLLAPSING -->
+		</header>
+		<div id="content">
+			<article>
+				<br>
+				<div class="textcontent">
+					<h1>Hi, this is John</h1>
+					<p>I handwriting this website, and hope you could enjoy following its features:
+						<ol>
+						<li>Using HTML 5 Basic Template and Following HTML 5 New Features
+							<ul>
+								<li>New Semantic Tags, like &lsaquo;header&rsaquo;, &lsaquo;hgroup&rsaquo;, &lsaquo;nav&rsaquo;, &lsaquo;article&rsaquo;, &lsaquo;footer&rsaquo;</li>
+								<li>Advanced Form Elements and Attributes, like 'placeholder';</li>
+							</ul>
+						</li>
+						<li>Responsive Web Design (RWD) by CSS3 Media Queries 
+							<ul>
+								<li>body default display width 980px;</li>
+								<li>the main Navi-Menu using the CSS3 media queries and a little jQuery;</li>
+								<li>the Navi-Menu properly display in a small screen (width<480px),like of the smartphones;
+								</li>
+								<li>contents (article, images) auto scale to screen size between 480px and 980px;</li>
+								<li>thumbnail items (its topic, summary, etc.) auto scroll down next line when smaller 480px width;</li>
+							</ul>
+						</li>
+						<li>Better understanding of following tips
+							<ul>
+								<li>difference of display: none and visibility: hidden;</li>
+								<li>what's the padding and margin color;</li>
+								<li>how to control floating element by both clearing;</li>
+								<li>how to move big gap between list elements;</li>
+							</ul>
+						</li>
+						</ol>
+					</p>
+					<p>
+				</div>
+			</article>
+			<br><br>
+		</div>
+		<!--
+		<aside>
+			<section><h3>Widget there</h3></section>
+		</aside>
+		-->
+		<footer><p>Copyright 2013 <a href="mailto:john.yin@ebizdesigner.com?Subject=I%20Like%20Chinese%20Tea">John Yin</a></p></footer>
+	</div>
+	<script>
+
+
+	</script>
+</body>
+</html>
