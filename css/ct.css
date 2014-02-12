@@ -185,8 +185,8 @@ nav a#pull {
 .thumbitem {
 	display: block;
 	float: left;
-	width: 33%;
-	max-width: 33%;
+	width: 33%;						
+	max-width: 33%;			/* IE 8 NOT SUPPORT MAX-WIDTH ONLY WHEN GIVEN A DEFINED WIDTH FIRST*/
 	overflow: visible;
 	padding-top: 10px;
 	margin:0;
@@ -343,6 +343,7 @@ footer {
 	.thumbitem {
 		display: block;
 		float: none;
+		width: 100%;
 		max-width: 100%;
 	}
 	
